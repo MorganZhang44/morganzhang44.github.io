@@ -24,7 +24,7 @@ url: "https://uclrobotics.co.uk"
 baseurl: ""
 
 # Build settings
-remote_theme: "mmistakes/minimal-mistakes@4.19.0"
+remote_theme: "mmistakes/minimal-mistakes@4.18.0"
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
