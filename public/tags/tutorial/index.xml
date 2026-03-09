@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tutorial on Your Name — Academic Portfolio</title>
+    <link>http://localhost:1313/academic-site/tags/tutorial/</link>
+    <description>Recent content in Tutorial on Your Name — Academic Portfolio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/academic-site/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Started with ROS 2: A Practical Guide</title>
+      <link>http://localhost:1313/academic-site/blog/getting-started-with-ros2/</link>
+      <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/academic-site/blog/getting-started-with-ros2/</guid>
+      <description>A beginner-friendly introduction to building robotics applications with ROS 2 Humble.</description>
+    </item>
+  </channel>
+</rss>

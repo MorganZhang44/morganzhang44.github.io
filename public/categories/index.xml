@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on Your Name — Academic Portfolio</title>
+    <link>http://localhost:1313/academic-site/categories/</link>
+    <description>Recent content in Categories on Your Name — Academic Portfolio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/academic-site/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tutorials</title>
+      <link>http://localhost:1313/academic-site/categories/tutorials/</link>
+      <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/academic-site/categories/tutorials/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Robotics</title>
+      <link>http://localhost:1313/academic-site/categories/robotics/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/academic-site/categories/robotics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Explainers</title>
+      <link>http://localhost:1313/academic-site/categories/explainers/</link>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/academic-site/categories/explainers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI</title>
+      <link>http://localhost:1313/academic-site/categories/ai/</link>
+      <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/academic-site/categories/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reflections</title>
+      <link>http://localhost:1313/academic-site/categories/reflections/</link>
+      <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/academic-site/categories/reflections/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Research</title>
+      <link>http://localhost:1313/academic-site/categories/research/</link>
+      <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/academic-site/categories/research/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

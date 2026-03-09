@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blog on Your Name — Academic Portfolio</title>
+    <link>http://localhost:1313/academic-site/blog/</link>
+    <description>Recent content in Blog on Your Name — Academic Portfolio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/academic-site/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Started with ROS 2: A Practical Guide</title>
+      <link>http://localhost:1313/academic-site/blog/getting-started-with-ros2/</link>
+      <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/academic-site/blog/getting-started-with-ros2/</guid>
+      <description>A beginner-friendly introduction to building robotics applications with ROS 2 Humble.</description>
+    </item>
+    <item>
+      <title>Transformer Architectures Explained Simply</title>
+      <link>http://localhost:1313/academic-site/blog/transformer-architectures-explained/</link>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/academic-site/blog/transformer-architectures-explained/</guid>
+      <description>A clear, visual walkthrough of how transformers work — attention, encoders, decoders, and why they changed AI.</description>
+    </item>
+    <item>
+      <title>My Research Workflow: Tools and Practices</title>
+      <link>http://localhost:1313/academic-site/blog/my-research-workflow/</link>
+      <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/academic-site/blog/my-research-workflow/</guid>
+      <description>A behind-the-scenes look at the tools, habits, and systems I use to stay productive in research.</description>
+    </item>
+  </channel>
+</rss>

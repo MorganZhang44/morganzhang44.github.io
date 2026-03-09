@@ -1,0 +1,124 @@
+baseURL: "https://morganzhang44.github.io/"
+languageCode: en-us
+title: "Your Name — Academic Portfolio"
+theme: PaperMod
+paginate: 10
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: "Your Name"
+  description: "Personal academic website — robotics, AI, and research."
+  keywords: [Academic, Portfolio, Research, AI, Robotics, Blog]
+  author: "Your Name"
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto    # dark / light / auto
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  # Home page profile
+  profileMode:
+    enabled: true
+    title: "Hi, I'm Your Name 👋"
+    subtitle: |
+      Researcher & Engineer in Robotics and Artificial Intelligence.
+      Exploring the intersection of intelligent systems and real-world applications.
+    imageUrl: ""
+    imageWidth: 140
+    imageHeight: 140
+    imageTitle: "Profile Photo"
+    buttons:
+      - name: "About Me"
+        url: /about/
+      - name: "Projects"
+        url: /projects/
+      - name: "Blog"
+        url: /blog/
+
+  # Social icons
+  socialIcons:
+    - name: github
+      url: "https://github.com/yourusername"
+    - name: linkedin
+      url: "https://linkedin.com/in/yourusername"
+    - name: email
+      url: "mailto:you@example.com"
+    - name: googlescholar
+      url: "https://scholar.google.com/citations?user=YOURID"
+
+  # Search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON   # required for search
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 20
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 30
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 40
+    - identifier: faq
+      name: FAQ
+      url: /faq/
+      weight: 50
+    - identifier: search
+      name: 🔍
+      url: /search/
+      weight: 60
+
+taxonomies:
+  category: categories
+  tag: tags
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false

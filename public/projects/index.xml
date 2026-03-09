@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Projects on Your Name — Academic Portfolio</title>
+    <link>http://localhost:1313/academic-site/projects/</link>
+    <description>Recent content in Projects on Your Name — Academic Portfolio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/academic-site/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Autonomous Robot Navigation with LiDAR-Based SLAM</title>
+      <link>http://localhost:1313/academic-site/projects/autonomous-robot-navigation/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/academic-site/projects/autonomous-robot-navigation/</guid>
+      <description>A real-time SLAM system for wheeled robots navigating GPS-denied indoor environments.</description>
+    </item>
+    <item>
+      <title>Deep Learning for Scientific Text Classification</title>
+      <link>http://localhost:1313/academic-site/projects/deep-learning-nlp/</link>
+      <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/academic-site/projects/deep-learning-nlp/</guid>
+      <description>Fine-tuning transformer models to classify research papers by domain and methodology.</description>
+    </item>
+    <item>
+      <title>Climate Data Analysis and Visualization Platform</title>
+      <link>http://localhost:1313/academic-site/projects/climate-data-analysis/</link>
+      <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/academic-site/projects/climate-data-analysis/</guid>
+      <description>An interactive dashboard for analyzing 40 years of regional climate data.</description>
+    </item>
+  </channel>
+</rss>
