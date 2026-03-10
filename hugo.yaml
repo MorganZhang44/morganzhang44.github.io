@@ -22,6 +22,9 @@ params:
   DateFormat: "January 2, 2006"
   defaultTheme: auto    # dark / light / auto
   disableThemeToggle: false
+  
+  # Browser tab icon
+  favicon: /favicon.ico
 
   ShowReadingTime: true
   ShowShareButtons: false
