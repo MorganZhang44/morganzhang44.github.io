@@ -1,0 +1,184 @@
+/* Widen the main content area */
+.main {
+  max-width: 900px;
+}
+
+/* ── Side-by-side profile layout ── */
+.profile .profile_inner {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  text-align: left;
+}
+
+.profile .profile-text {
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+.profile .profile-text .buttons {
+  justify-content: flex-start;
+}
+
+.profile .profile-text .social-icons {
+  justify-content: flex-start;
+}
+
+.profile .profile-image {
+  flex: 0 0 auto;
+}
+
+.profile .profile-image img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Stack vertically on small screens */
+@media (max-width: 680px) {
+  .profile .profile_inner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .profile .profile-text .buttons,
+  .profile .profile-text .social-icons {
+    justify-content: center;
+  }
+
+  .profile .profile-image img {
+    width: 180px;
+    height: 180px;
+  }
+}
+/* ── Floating Sidebar TOC (Projects & Posts) ── */
+@media screen and (min-width: 1200px) {
+  /* Only apply grid layout if the post has a TOC */
+  .post-single:has(.toc) {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  
+  /* Widen the main container slightly so content doesn't feel cramped */
+  .main:has(.post-single .toc) {
+    max-width: 1150px;
+  }
+
+  /* Place content on the right */
+  .post-single:has(.toc) .post-header,
+  .post-single:has(.toc) .post-content,
+  .post-single:has(.toc) .post-footer,
+  .post-single:has(.toc) .comments {
+    grid-column: 2 / 3;
+  }
+
+  /* Place TOC on the left and make it sticky */
+  .post-single:has(.toc) .toc {
+    grid-column: 1 / 2;
+    grid-row: 1 / 10;
+    position: sticky;
+    top: 80px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    font-size: 0.95rem;
+  }
+  
+  .post-single:has(.toc) .toc .inner {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .post-single:has(.toc) .toc details summary {
+    cursor: default;
+    margin-left: 0;
+  }
+  
+  .post-single:has(.toc) .toc details[open] summary {
+    cursor: default;
+  }
+  
+  /* Make the TOC title slightly larger to match heading style */
+  .post-single:has(.toc) .toc .details {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: block;
+  }
+}
+
+/* ── Side-by-side Layout for Lists (e.g. Blog/Projects index) ── */
+@media screen and (min-width: 900px) {
+  .list-layout-wrapper {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  
+  .list-sidebar {
+    position: sticky;
+    top: 80px;
+  }
+
+  /* Make list wide enough to accommodate the sidebar */
+  .main:has(.list-layout-wrapper) {
+    max-width: 1000px;
+  }
+}
+
+.list-sidebar h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4rem;
+}
+
+.taxonomy-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.taxonomy-list li {
+  margin-bottom: 0.5rem;
+}
+
+.taxonomy-list a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.1s;
+}
+
+.taxonomy-list a:hover {
+  color: var(--primary);
+}
+
+.taxonomy-list span {
+  font-size: 0.85em;
+  opacity: 0.7;
+}
+
+.taxonomy-list.inline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.taxonomy-list.inline-tags li {
+  margin-bottom: 0;
+}
+
+.taxonomy-list.inline-tags a {
+  background: var(--tertiary);
+  padding: 2px 8px;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+}

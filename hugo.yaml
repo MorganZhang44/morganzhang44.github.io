@@ -1,6 +1,6 @@
 baseURL: "https://morganzhang44.github.io/"
 languageCode: en-us
-title: "Your Name — Academic Portfolio"
+title: "Morgan's Blog"
 theme: PaperMod
 paginate: 10
 
@@ -15,10 +15,10 @@ minify:
 
 params:
   env: production
-  title: "Your Name"
+  title: "Morgan Zhang"
   description: "Personal academic website — robotics, AI, and research."
   keywords: [Academic, Portfolio, Research, AI, Robotics, Blog]
-  author: "Your Name"
+  author: "Morgan"
   DateFormat: "January 2, 2006"
   defaultTheme: auto    # dark / light / auto
   disableThemeToggle: false
@@ -37,18 +37,18 @@ params:
   hidemeta: false
   hideSummary: false
   showtoc: true
-  tocopen: false
+  tocopen: true
 
   # Home page profile
   profileMode:
     enabled: true
-    title: "Hi, I'm Your Name 👋"
+    title: "Hi, I'm Morgan Zhang 👋"
     subtitle: |
-      Researcher & Engineer in Robotics and Artificial Intelligence.
-      Exploring the intersection of intelligent systems and real-world applications.
-    imageUrl: ""
-    imageWidth: 140
-    imageHeight: 140
+      Robotics and AI student at UCL, building intelligent systems across embodied AI, robot learning, 
+      and real-world deployment.
+    imageUrl: "/images/avatar.png"
+    imageWidth: 280
+    imageHeight: 280
     imageTitle: "Profile Photo"
     buttons:
       - name: "About Me"
@@ -61,13 +61,13 @@ params:
   # Social icons
   socialIcons:
     - name: github
-      url: "https://github.com/yourusername"
+      url: "https://github.com/morganzhang44"
     - name: linkedin
-      url: "https://linkedin.com/in/yourusername"
+      url: "https://www.linkedin.com/in/zhilin-zhang-morgan"
     - name: email
-      url: "mailto:you@example.com"
-    - name: googlescholar
-      url: "https://scholar.google.com/citations?user=YOURID"
+      url: "mailto:morgan.zhang.24@ucl.ac.uk"
+#    - name: googlescholar
+#      url: "https://scholar.google.com/citations?user=YOURID"
 
   # Search
   fuseOpts:

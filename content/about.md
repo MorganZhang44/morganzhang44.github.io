@@ -8,7 +8,17 @@ ShowToc: false
 
 ## 👋 Hello!
 
-I'm a researcher and engineer passionate about **Robotics**, **Artificial Intelligence**, and building systems that bridge the gap between theory and the real world.
+I’m Morgan Zhang, a Robotics and Artificial Intelligence student at UCL with a strong interest in **Robotics**, **Artificial intelligence**, and **Intelligent hardware**.
+
+I approach technology both as a researcher and as a builder. Beyond technical development, I’m interested in how robotics and AI can evolve from research ideas into practical products that are useful, scalable, and impactful.
+
+---
+
+## 🔬 Research Interests
+
+- **Embodied AI** — Intelligent agents that perceive and act through physical or simulated bodies.
+- **Multi-Agent Systems** — Coordination and collaboration among multiple intelligent agents.
+- **Human-Robot Interaction** — Designing intuitive interfaces for collaborative robots.
 
 ---
 
@@ -16,34 +26,24 @@ I'm a researcher and engineer passionate about **Robotics**, **Artificial Intell
 
 | Degree | Institution | Year |
 |---|---|---|
-| Ph.D. in Robotics | University of Technology | 2023 – Present |
-| M.Sc. in Computer Science | State University | 2021 – 2023 |
-| B.Sc. in Electrical Engineering | National Institute of Tech | 2017 – 2021 |
-
----
-
-## 🔬 Research Interests
-
-- **Autonomous Navigation** — Path planning and SLAM for mobile robots in unstructured environments.
-- **Deep Learning for Perception** — Computer vision and sensor fusion for robotic systems.
-- **Natural Language Processing** — Transformer models for scientific text understanding.
-- **Human-Robot Interaction** — Designing intuitive interfaces for collaborative robots.
+| MEng. in Robotics and Artificial Intelligence | University College London | 2024 – Present |
 
 ---
 
 ## 🛠️ Skills & Tools
 
-- **Languages:** Python, C++, MATLAB, Julia
-- **Frameworks:** ROS 2, PyTorch, TensorFlow, OpenCV
-- **Platforms:** NVIDIA Jetson, Raspberry Pi, Arduino
-- **Tools:** Git, Docker, LaTeX, Linux
+- **Languages:** Python, C/C++, MATLAB, SQL
+- **Robotics & AI:** ROS2, Issac Sim, PyBullet, PyTorch, OpenCV, Computer Vision, Machine Learning
+- **Hardware & Embedded:** Arduino, STM32, Raspberry Pi
+- **Engineering & Design:** Fusion 360, SolidWorks, EasyEDA, 3D Printing, Laser Cutting
+- **Tools:** Git, Linux, Docker, LaTeX
 
----
+<!-- ---
 
 ## 🌍 Beyond Research
 
 When I'm not in the lab, you'll find me hiking mountain trails, contributing to open-source projects, or writing tutorials to make complex AI topics accessible to everyone.
 
----
+--- -->
 
-*Want to collaborate or learn more? Feel free to [reach out](mailto:you@example.com).*
+*Want to collaborate or learn more? Feel free to [reach out](mailto:morgan.zhang.24@ucl.ac.uk).*
