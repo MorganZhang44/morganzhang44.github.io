@@ -3,7 +3,7 @@ title: "Frequently Asked Questions"
 layout: "single"
 url: "/faq/"
 summary: "Common questions about my work, research, and how to get in touch."
-ShowToc: true
+ShowToc: false
 ---
 
 ## General

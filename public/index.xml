@@ -30,6 +30,20 @@
       <description>An interactive dashboard for analyzing 40 years of regional climate data.</description>
     </item>
     <item>
+      <title>Understanding Attention Mechanisms</title>
+      <link>http://localhost:1313/blog/understanding-attention/</link>
+      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/understanding-attention/</guid>
+      <description>A deep dive into how attention works in modern deep learning architectures.</description>
+    </item>
+    <item>
+      <title>Getting Started with ROS 2</title>
+      <link>http://localhost:1313/blog/getting-started-with-ros2/</link>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/getting-started-with-ros2/</guid>
+      <description>A beginner-friendly guide to setting up your first ROS 2 workspace.</description>
+    </item>
+    <item>
       <title>About Me</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Blogs on Morgan&#39;s Blog</title>
-    <link>http://localhost:1313/blog/</link>
-    <description>Recent content in Blogs on Morgan&#39;s Blog</description>
+    <title>Machine Learning on Morgan&#39;s Blog</title>
+    <link>http://localhost:1313/tags/machine-learning/</link>
+    <description>Recent content in Machine Learning on Morgan&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 20 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Understanding Attention Mechanisms</title>
       <link>http://localhost:1313/blog/understanding-attention/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/understanding-attention/</guid>
       <description>A deep dive into how attention works in modern deep learning architectures.</description>
-    </item>
-    <item>
-      <title>Getting Started with ROS 2</title>
-      <link>http://localhost:1313/blog/getting-started-with-ros2/</link>
-      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/getting-started-with-ros2/</guid>
-      <description>A beginner-friendly guide to setting up your first ROS 2 workspace.</description>
     </item>
   </channel>
 </rss>

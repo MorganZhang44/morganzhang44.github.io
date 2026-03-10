@@ -1,0 +1,128 @@
+{{- define "main" }}
+
+{{- $isBlog := eq .Section "blog" }}
+
+{{- if $isBlog }}
+<div class="list-layout-wrapper">
+  <!-- Left Sidebar (1/4 width) -->
+  <aside class="list-sidebar">
+    <div class="sidebar-inner">
+      {{- $sectionPages := where site.RegularPages "Section" "blog" }}
+      
+      {{- $sectionCategories := slice }}
+      {{- $sectionTags := slice }}
+      
+      {{- range $sectionPages }}
+        {{- if .Params.categories }}
+          {{- range .Params.categories }}
+            {{- $sectionCategories = $sectionCategories | append . }}
+          {{- end }}
+        {{- end }}
+        {{- if .Params.tags }}
+          {{- range .Params.tags }}
+            {{- $sectionTags = $sectionTags | append . }}
+          {{- end }}
+        {{- end }}
+      {{- end }}
+      
+      {{- $uniqueCategories := $sectionCategories | uniq | sort }}
+      {{- $uniqueTags := $sectionTags | uniq | sort }}
+
+      <h3>Categories</h3>
+      {{- if $uniqueCategories }}
+      <ul class="taxonomy-list">
+        {{- range $name := $uniqueCategories }}
+        <li><a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a></li>
+        {{- end }}
+      </ul>
+      {{- else }}
+      <p style="font-size: 0.9em; opacity: 0.7;">No categories yet.</p>
+      {{- end }}
+
+      <h3 style="margin-top: 1.5rem;">Tags</h3>
+      {{- if $uniqueTags }}
+      <ul class="taxonomy-list inline-tags">
+        {{- range $name := $uniqueTags }}
+        <li><a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}/">#{{ $name }}</a></li>
+        {{- end }}
+      </ul>
+      {{- else }}
+      <p style="font-size: 0.9em; opacity: 0.7;">No tags yet.</p>
+      {{- end }}
+    </div>
+  </aside>
+
+  <!-- Right Content (3/4 width) -->
+  <div class="list-main-content">
+{{- end }}
+
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title entry-hint-parent">
+      {{ .Title }}
+      {{- if .Draft }}
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+      {{- end }}
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+      {{- partial "post_meta.html" . -}}
+      {{- partial "translation_list.html" . -}}
+      {{- partial "edit_post.html" . -}}
+      {{- partial "post_canonical.html" . -}}
+    </div>
+    {{- end }}
+  </header>
+  {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
+  {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+  
+  {{- /* Only show TOC if it's NOT a blog post (blog posts use the global taxonomy sidebar instead) */ -}}
+  {{- if and (.Param "ShowToc") (not $isBlog) }}
+  {{- partial "toc.html" . }}
+  {{- end }}
+
+  {{- if .Content }}
+  <div class="post-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
+
+  <footer class="post-footer">
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    <ul class="post-tags">
+      {{- range ($.GetTerms $tags) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+    {{- if (.Param "ShowPostNavLinks") }}
+    {{- partial "post_nav_links.html" . }}
+    {{- end }}
+    {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
+    {{- partial "share_icons.html" . -}}
+    {{- end }}
+  </footer>
+
+  {{- if (.Param "comments") }}
+  {{- partial "comments.html" . }}
+  {{- end }}
+</article>
+
+{{- if $isBlog }}
+  </div> <!-- end list-main-content -->
+</div> <!-- end list-layout-wrapper -->
+{{- end }}
+
+{{- end }}{{/* end main */}}

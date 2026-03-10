@@ -4,34 +4,68 @@
 {{- partial "index_profile.html" . }}
 {{- else }} {{/* if not profileMode */}}
 
+{{- $isTaxonomy := or (eq .Kind "term") (eq .Kind "taxonomy") (eq .Type "categories") (eq .Type "tags") }}
+{{- $showSidebar := or (eq .Section "blog") $isTaxonomy }}
+{{- if $showSidebar }}
 <div class="list-layout-wrapper">
   <!-- Left Sidebar (1/4 width) -->
   <aside class="list-sidebar">
     <div class="sidebar-inner">
+      {{- $currentSection := .Section }}
+      {{- if eq .Kind "term" }}
+        {{- /* If we are on a tag/category page, try to guess the context (defaults to blog logic for now since that's where we use it) */ -}}
+        {{- $currentSection = "blog" }}
+      {{- end }}
+      
+      {{- $sectionPages := where site.RegularPages "Section" $currentSection }}
+      
+      {{- $sectionCategories := slice }}
+      {{- $sectionTags := slice }}
+      
+      {{- range $sectionPages }}
+        {{- if .Params.categories }}
+          {{- range .Params.categories }}
+            {{- $sectionCategories = $sectionCategories | append . }}
+          {{- end }}
+        {{- end }}
+        {{- if .Params.tags }}
+          {{- range .Params.tags }}
+            {{- $sectionTags = $sectionTags | append . }}
+          {{- end }}
+        {{- end }}
+      {{- end }}
+      
+      {{- $uniqueCategories := $sectionCategories | uniq | sort }}
+      {{- $uniqueTags := $sectionTags | uniq | sort }}
+
       <h3>Categories</h3>
-      {{- $categories := site.Taxonomies.categories }}
-      {{- if $categories }}
+      {{- if $uniqueCategories }}
       <ul class="taxonomy-list">
-        {{- range $name, $taxonomy := $categories }}
-        <li><a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }} <span>({{ $taxonomy.Count }})</span></a></li>
+        {{- range $name := $uniqueCategories }}
+        <li><a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a></li>
         {{- end }}
       </ul>
+      {{- else }}
+      <p style="font-size: 0.9em; opacity: 0.7;">No categories yet.</p>
       {{- end }}
 
       <h3 style="margin-top: 1.5rem;">Tags</h3>
-      {{- $tags := site.Taxonomies.tags }}
-      {{- if $tags }}
+      {{- if $uniqueTags }}
       <ul class="taxonomy-list inline-tags">
-        {{- range $name, $taxonomy := $tags }}
+        {{- range $name := $uniqueTags }}
         <li><a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}/">#{{ $name }}</a></li>
         {{- end }}
       </ul>
+      {{- else }}
+      <p style="font-size: 0.9em; opacity: 0.7;">No tags yet.</p>
       {{- end }}
     </div>
   </aside>
 
   <!-- Right Content (3/4 width) -->
   <div class="list-main-content">
+    {{- end }}
+
     {{- if not .IsHome | and .Title }}
     <header class="page-header">
       {{- partial "breadcrumbs.html" . }}
@@ -70,7 +104,7 @@
 
     {{- if .IsHome }}
     {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-    {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
+    {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
     {{- end }}
 
     {{- $paginator := .Paginate $pages }}
@@ -143,8 +177,11 @@
       </nav>
     </footer>
     {{- end }}
+
+    {{- if $showSidebar }}
   </div> <!-- end list-main-content -->
 </div> <!-- end list-layout-wrapper -->
+{{- end }}
 
 {{- end }}{{/* end profileMode */}}
 
