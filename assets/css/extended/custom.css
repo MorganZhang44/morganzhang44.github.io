@@ -53,8 +53,10 @@
     height: 180px;
   }
 }
+
 /* ── Floating Sidebar TOC (Projects & Posts) ── */
 @media screen and (min-width: 1200px) {
+
   /* Only apply grid layout if the post has a TOC */
   .post-single:has(.toc) {
     display: grid;
@@ -62,7 +64,7 @@
     gap: 40px;
     align-items: start;
   }
-  
+
   /* Widen the main container slightly so content doesn't feel cramped */
   .main:has(.post-single .toc) {
     max-width: 1150px;
@@ -90,21 +92,21 @@
     overflow-y: auto;
     font-size: 0.95rem;
   }
-  
+
   .post-single:has(.toc) .toc .inner {
     margin: 0;
     padding: 0;
   }
-  
+
   .post-single:has(.toc) .toc details summary {
     cursor: default;
     margin-left: 0;
   }
-  
+
   .post-single:has(.toc) .toc details[open] summary {
     cursor: default;
   }
-  
+
   /* Make the TOC title slightly larger to match heading style */
   .post-single:has(.toc) .toc .details {
     font-size: 1.2rem;
@@ -122,7 +124,7 @@
     gap: 40px;
     align-items: start;
   }
-  
+
   .list-sidebar {
     position: sticky;
     top: 80px;
@@ -181,4 +183,29 @@
   padding: 2px 8px;
   border-radius: var(--radius);
   font-size: 0.85rem;
+}
+
+
+/* ── Header Subtitle ── */
+.header .logo a {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6px !important;
+}
+
+.logo-text-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  margin-top: 16px;
+}
+
+.logo-subtitle {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--secondary);
+  line-height: 1;
+  letter-spacing: 0.2px;
 }

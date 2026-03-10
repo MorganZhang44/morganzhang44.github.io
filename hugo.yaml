@@ -1,6 +1,6 @@
 baseURL: "https://morganzhang44.github.io/"
 languageCode: en-us
-title: "Morgan's Blog"
+title: "Morgan Zhang"
 theme: PaperMod
 paginate: 10
 
@@ -24,7 +24,7 @@ params:
   disableThemeToggle: false
 
   ShowReadingTime: true
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
@@ -42,7 +42,7 @@ params:
   # Home page profile
   profileMode:
     enabled: true
-    title: "Hi, I'm Morgan Zhang 👋"
+    title: "Hi, I'm Morgan 👋"
     subtitle: |
       Robotics and AI student at UCL, building intelligent systems across embodied AI, robot learning, 
       and real-world deployment.

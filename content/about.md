@@ -4,21 +4,14 @@ layout: "single"
 url: "/about/"
 summary: "Learn more about my background, research interests, and academic journey."
 ShowToc: false
+disableShare: true
 ---
 
 ## 👋 Hello!
 
-I’m Morgan Zhang, a Robotics and Artificial Intelligence student at UCL with a strong interest in **Robotics**, **Artificial intelligence**, and **Intelligent hardware**.
+I’m Morgan Zhang, a Robotics and Artificial Intelligence student at UCL with a strong interest in **Robotics**, **Artificial intelligence**, and **Smart devices**.
 
 I approach technology both as a researcher and as a builder. Beyond technical development, I’m interested in how robotics and AI can evolve from research ideas into practical products that are useful, scalable, and impactful.
-
----
-
-## 🔬 Research Interests
-
-- **Embodied AI** — Intelligent agents that perceive and act through physical or simulated bodies.
-- **Multi-Agent Systems** — Coordination and collaboration among multiple intelligent agents.
-- **Human-Robot Interaction** — Designing intuitive interfaces for collaborative robots.
 
 ---
 
@@ -27,6 +20,16 @@ I approach technology both as a researcher and as a builder. Beyond technical de
 | Degree | Institution | Year |
 |---|---|---|
 | MEng. in Robotics and Artificial Intelligence | University College London | 2024 – Present |
+
+  
+
+---
+
+## 🔬 Research Interests
+
+- **Embodied AI** — Intelligent agents that perceive and act through physical or simulated bodies.
+- **Multi-Agent Systems** — Coordination and collaboration among multiple intelligent agents.
+- **Human-Robot Interaction** — Designing intuitive interfaces for collaborative robots.
 
 ---
 
